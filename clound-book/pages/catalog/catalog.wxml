@@ -1,0 +1,4 @@
+<!--pages/catalog/catalog.wxml-->
+<view class='catalog' wx:for="{{list}}" wx:key="{{index}}">
+  <view class='catalog-item' bindtap='lookContent' data-id='{{item._id}}'>{{item.title}}</view>
+</view>

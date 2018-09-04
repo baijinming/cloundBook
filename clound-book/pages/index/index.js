@@ -5,18 +5,21 @@ import {fetch} from "../../utils/util.js"
 
 Page({
   data: {
+    isLoading:false,
     swiperData:[],
     content:[],
     indicatorDots: true,
-    autoplay: false,
-    interval: 1000,
-    duration: 300
-
+    autoplay: true,
+    interval: 2000,
+    duration: 500
   },
   onLoad: function () {
     this.getData()
   },
   getData(){
+    this.setData({
+      isLoading:true
+    })
     fetch.get("/swiper").then(res=>{
       this.setData({
         swiperData:res.data
@@ -24,7 +27,12 @@ Page({
     }),
     fetch.get("/category/books").then(res => {
       this.setData({
-        content: res.data
+        content: res.data,
+        isLoading:false
+      })
+    }).catch(err=>{
+      this.setData({
+        isLoading: false
       })
     })
   },

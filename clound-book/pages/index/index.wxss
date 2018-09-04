@@ -1,4 +1,14 @@
 
+.loading image{
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-top: -150rpx;
+  margin-left: -150rpx;
+  width: 300rpx;
+  height: 300rpx;
+}
+
 .container{
   margin: 0 20rpx;
   padding: 0;
@@ -39,7 +49,7 @@
 }
 
 .book .book-text{
-  margin-left: 20rpx;
+  margin:0 0 10rpx 20rpx;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -49,7 +59,8 @@
 
 .book .book-title{
   font-weight: 700;
-  color: #444
+  color: #444;
+  font-size: 13px
 }
 
 .book .book-desc{

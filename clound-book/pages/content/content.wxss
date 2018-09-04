@@ -1,0 +1,70 @@
+@import '/towxml/style/main.wxss';
+@import '/towxml/style/theme/light.wxss';
+@import '/towxml/style/theme/dark.wxss';
+
+.content .loading image{
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-top: -150rpx;
+  margin-left: -150rpx;
+  width: 300rpx;
+  height: 300rpx;
+}
+
+.content .menu{
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100rpx;
+  background-color: #f7f7f7
+}
+
+.menu .icon{
+  margin: 20rpx 0;
+  height: 60rpx;
+  width: 60rpx
+}
+
+.content .catalog{
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 100rpx;
+  width: 500rpx;
+  background-color: #fff;
+}
+
+.catalog .catalog-list{
+  padding-left: 20rpx;
+}
+
+.catalog .catalog-item{
+  font-size: 14px;
+  line-height: 2;
+  margin-top: 10rpx;
+  color: #333;
+  font-weight: 700;
+  border-bottom: 2rpx solid #e9e9e9;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  align-content: center;
+}
+
+.masklayer{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 100rpx;
+  background-color: #e9e9e9;
+  width: 250rpx;
+  opacity: 0.4
+}

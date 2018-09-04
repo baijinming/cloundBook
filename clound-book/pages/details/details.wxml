@@ -19,7 +19,7 @@
     <view class='book-intro'>简介</view>
     <view class='intro-content'>{{book.data.desc}}</view>
   </view>
-  <view class='catalog'>
+  <view class='catalog' bindtap='lookCatalog' data-id='{{book.data._id}}'>
     <view>
       <text class='look-catalog'>查看目录</text>
       <text>共{{book.length}}章</text>
@@ -27,6 +27,6 @@
     <text>更新于2天前></text>
   </view>
   <view class='bottom-btn'>
-    <button class='read-book'>阅读该书籍</button>
+    <button class='read-book' bindtap='lookCatalog' data-id='{{book.data._id}}'>阅读该书籍</button>
   </view>
 </view>

@@ -1,6 +1,5 @@
-// pages/details/details.js
-
-import { fetch } from "../../utils/util.js"
+// pages/catalog/catalog.js
+import {fetch} from "../../utils/util.js";
 
 Page({
 
@@ -9,7 +8,7 @@ Page({
    */
   data: {
     bookId:"",
-    book:{}
+    list:[]
   },
 
   /**
@@ -18,20 +17,21 @@ Page({
   onLoad: function (options) {
     this.setData({
       bookId:options.id
-    })
+    }),
     this.getData()
+
   },
   getData(){
-    fetch.get(`/book/${this.data.bookId}`).then(res=>{
+    fetch.get(`/titles/${this.data.bookId}`).then(res=>{
       this.setData({
-        book:res
+        list:res.data
       })
     })
   },
-  lookCatalog(event){
-    let id=event.currentTarget.dataset.id;
+  lookContent(event){
+    let id = event.currentTarget.dataset.id;
     wx.navigateTo({
-      url: `/pages/catalog/catalog?id=${id}`,
+      url: `/pages/content/content?id=${id}&bookId=${this.data.bookId}`,
     })
   },
 

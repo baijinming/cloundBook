@@ -1,0 +1,20 @@
+/* pages/catalog/catalog.wxss */
+
+.catalog{
+  padding:10rpx;
+}
+
+.catalog .catalog-item{
+  font-size: 14px;
+  color: #333;
+  line-height: 2;
+  font-weight: 700;
+  border-bottom: 2rpx solid #e9e9e9;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  align-content: center;
+}
