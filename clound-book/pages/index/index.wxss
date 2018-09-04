@@ -1,0 +1,73 @@
+
+.container{
+  margin: 0 20rpx;
+  padding: 0;
+}
+
+.slideShow .slide-image{
+  height: 350rpx;
+  width: 100%;
+}
+
+.content{
+  margin-top:50rpx; 
+}
+
+.content .books{
+  margin-top: 30rpx;
+}
+
+.content .title{
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+  height: 32rpx;
+  line-height: 32rpx;
+  padding-left:20rpx; 
+  border-left: 2px solid #000;
+}
+
+.content .book{
+  margin-top: 30rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.book .img{
+  width: 200rpx;
+  height: 300rpx;
+}
+
+.book .book-text{
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #666;
+}
+
+.book .book-title{
+  font-weight: 700;
+  color: #444
+}
+
+.book .book-desc{
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  align-content: center;
+}
+
+.book .book-anthor{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.book .book-anthor .book-r text{
+  margin-left: 10rpx;
+}

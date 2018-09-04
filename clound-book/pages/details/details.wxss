@@ -1,0 +1,92 @@
+.book-h{
+  border-bottom:8rpx solid #888; 
+  padding: 0 20rpx;
+}
+
+.book-h .book-cover{
+  display: flex;
+  margin: 30rpx 0;
+}
+
+.book-cover image{
+  width: 200rpx;
+  height: 230rpx
+}
+
+.book-cover .book-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 30rpx;
+  font-size: 12px;
+  color: #444;
+}
+
+.book-content .book-title{
+  font-weight: 700;
+  color: #333;
+  font-size: 14px
+}
+
+.book-h .btns{
+  display: flex;
+  justify-content: space-between;
+  margin: 50rpx 0 30rpx;
+}
+
+.btns .btn{
+  width: 310rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 14px;
+  color: #444;
+  background-color: #9f9f9f;
+}
+
+.intro{
+  padding:0 20rpx ;
+  border-bottom: 2rpx solid #888;
+}
+
+.intro .book-intro{
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+  margin-top: 20rpx;
+}
+
+.intro .intro-content{
+  font-size: 12px;
+  color: #444;
+  margin:30rpx 0;
+}
+
+.catalog{
+  padding:40rpx 20rpx;
+  border-bottom: 6rpx solid #888;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #444
+}
+
+.catalog .look-catalog{
+  font-size: 14px;
+  color: #333;
+  font-weight: 700;
+  margin-right: 20rpx;
+}
+
+.bottom-btn{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0
+}
+
+.bottom-btn .read-book{
+  margin: 20rpx auto;
+  width: 700rpx;
+  color: #fff;
+  background-color: skyblue;
+}
