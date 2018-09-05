@@ -52,7 +52,7 @@ Page({
   //显示目录
   showCatalog(){
     this.setData({
-      isShow:true,
+      isShow:!this.data.isShow,
     })
   },
   //隐藏目录
