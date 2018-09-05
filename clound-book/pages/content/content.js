@@ -14,7 +14,7 @@ Page({
     bookId: "",
     catalog:[],
     isShow:false,
-    fontSize:16
+    fontSize:32,
   },
 
   /**
@@ -52,13 +52,13 @@ Page({
   //显示目录
   showCatalog(){
     this.setData({
-      isShow:true
+      isShow:true,
     })
   },
   //隐藏目录
   hideCatalog(){
     this.setData({
-      isShow: false
+      isShow: false,
     })
   },
   //切换指定章节
@@ -73,28 +73,37 @@ Page({
   //切换章节，上一章/下一章
   toggleChaptor(event){
     let num = parseInt(event.currentTarget.dataset.num);
-    let lastIndex;
+    let newIndex;
     this.data.catalog.forEach((item,index)=>{
       if(item._id==this.data.id){
-        lastIndex=index+num
+        newIndex=index+num
       }
     })
-    this.setData({
-      id:this.data.catalog[lastIndex]._id,
-      isShow:false
-    })
-    this.getData()
+    if(this.data.catalog[newIndex]){
+      this.setData({
+        id: this.data.catalog[newIndex]._id,
+        isShow: false
+      })
+      this.getData()
+    }else{
+      
+    }
+    
   },
   //改变字体大小
   addSize(){
-    this.setData({
-      fontSize: this.data.fontSize + 1
-    })
+    if(this.data.fontSize<50){
+      this.setData({
+        fontSize: this.data.fontSize + 2
+      })
+    }
   },
   reduceSize() {
-    this.setData({
-      fontSize: this.data.fontSize - 1
-    })
+    if(this.data.fontSize>24){
+      this.setData({
+        fontSize: this.data.fontSize - 2
+      })
+    }
   },
 
   /**

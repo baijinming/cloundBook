@@ -8,6 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    isLoading: false,
     bookId:"",
     book:{}
   },
@@ -22,9 +23,17 @@ Page({
     this.getData()
   },
   getData(){
+    this.setData({
+      isLoading: true
+    })
     fetch.get(`/book/${this.data.bookId}`).then(res=>{
       this.setData({
-        book:res
+        book:res,
+        isLoading: false
+      })
+    }).catch(err => {
+      this.setData({
+        isLoading: false
       })
     })
   },
