@@ -14,8 +14,8 @@
         </view>
       </view>
       <view class='btns'>
-        <button class='btn'>收藏</button>
-        <button class='btn'>分享好友</button>
+        <button class='btn' bindtap='toggleCollect' style='background-color:{{book.isCollect ? "skyblue" : ""}}'>{{book.isCollect ? "已收藏" : "收藏"}}</button>
+        <button class='btn' open-type='share'>分享好友</button>
       </view>
     </view>
     <view class='intro'>

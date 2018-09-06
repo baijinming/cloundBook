@@ -1,0 +1,2 @@
+<!--pages/user/user.wxml-->
+<text bindtap='jumpCollect'>我的收藏</text>

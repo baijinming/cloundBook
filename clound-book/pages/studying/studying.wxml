@@ -1,0 +1,35 @@
+
+<view>
+  <view wx:if="{{isLoading}}" class='loading'>
+    <image src='/static/imgs/loading.svg'></image>
+  </view>
+  <view wx:else>
+    <view class='books' wx:for="{{books}}" wx:key="{{index}}">
+      <view class='book'>
+        <image src='{{item.book.img}}' class='img'></image>
+        <view class='correlation'>
+          <view class='book-title'>{{item.book.title}}</view>
+          <view class='book-author'>作者:{{item.book.author}}</view>
+          <view class='book-progress'>
+            <view class='progress'>
+              <progress percent="{{item.title.total}}" stroke-width="5" activeColor="skyblue" backgroundColor="block" active />
+            </view>
+            <text>已看{{item.title.total}}%</text>
+          </view>
+          <view class='lastLook'>
+            <text>上次看到：{{item.title.title}}</text>
+            <text class='time'>2分前</text>
+          </view>
+          <view class='book-btns'>
+            <button class='book-btn' bindtap='readMore' data-id='{{item.title._id}}' data-bookId='{{item.title.bookId}}'>继续阅读</button>
+            <button class='book-btn' bindtap='jumpbook' data-id='{{item.book._id}}'>查看文档</button>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='load' wx:if="{{!hasMore}}">
+      <text>已全部加载</text>
+    </view>
+  </view>
+</view>
+

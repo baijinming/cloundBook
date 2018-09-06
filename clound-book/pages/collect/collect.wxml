@@ -1,0 +1,17 @@
+
+<view>
+  <view wx:if="{{isLoading}}" class='loading'>
+    <image src='/static/imgs/loading.svg'></image>
+  </view>
+  <view wx:else>
+    <view class='books' wx:for="{{books}}" wx:key="{{index}}">
+      <view class='book'>
+        <image src="{{item.book.img}}" class='img' bindtap='jumpbook' data-id='{{item.book._id}}'></image>
+        <text class='author'>作者：{{item.book.author}}</text>
+      </view>
+    </view>
+    <view class='load' wx:if="{{!hasMore}}">
+      <text>已全部加载</text>
+    </view>
+  </view>
+</view>

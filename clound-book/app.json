@@ -3,12 +3,42 @@
     "pages/index/index",
     "pages/details/details",
     "pages/catalog/catalog",
-    "pages/content/content"
+    "pages/content/content",
+    "pages/user/user",
+    "pages/collect/collect",
+    "pages/studying/studying",
+    "pages/allbooks/allbooks"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "云书",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 50
+  },
+  "tabBar": {
+    "color": "#898989",
+    "selectedColor": "#1296DB",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/static/imgs/index.png",
+        "selectedIconPath": "/static/imgs/_index.png"
+      },
+      {
+        "pagePath": "pages/studying/studying",
+        "text": "我的学习",
+        "iconPath": "/static/imgs/book.png",
+        "selectedIconPath": "/static/imgs/_book.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "个人中心",
+        "iconPath": "/static/imgs/user.png",
+        "selectedIconPath": "/static/imgs/_user.png"
+      }
+    ]
   }
 }

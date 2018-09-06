@@ -1,0 +1,38 @@
+.loading image{
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-top: -150rpx;
+  margin-left: -150rpx;
+  width: 300rpx;
+  height: 300rpx;
+}
+
+.books{
+  display: flex;
+  justify-content: space-around
+}
+
+.books .book{
+  width: 250rpx;
+  height: 400rpx;
+  text-align: center
+}
+
+.book .img{
+  width: 250rpx;
+  height: 300rpx;
+}
+
+.book .author{
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 30rpx
+}
+
+.load{
+  font-size: 14px;
+  text-align: center;
+  color: #444;
+  margin: 20rpx;
+}

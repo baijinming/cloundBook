@@ -1,0 +1,24 @@
+<view>
+  <view class='class-title'>{{content.data.title}}</view>
+  <view class='content'>
+    <view class='book' wx:for="{{content.data.books}}" wx:for-item="book" wx:key="{{index}}" bindtap='jumpbook' data-id='{{book._id}}' bindtap='jumpbook' data-id='{{book._id}}'>
+      <view>
+        <image src='{{book.img}}' class='img'></image>
+      </view>
+      <view class='book-text'>
+        <view class='book-title'>{{book.title}}</view>
+        <view class='book-desc'>{{book.desc}}</view>
+        <view class='book-anthor'>
+          <text class='book-l'>{{book.author}}</text>
+          <view class='book-r'>
+            <text>两天前</text>
+            <text>后端开发</text>
+            <text>{{item.looknums}}人在看</text></view>
+          </view>
+      </view>
+    </view>
+  </view>
+  <view class='load' wx:if="{{!hasMore}}">
+    <text>已全部加载</text>
+  </view>
+</view>
