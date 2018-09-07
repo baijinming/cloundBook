@@ -12,13 +12,13 @@
           <view class='book-author'>作者:{{item.book.author}}</view>
           <view class='book-progress'>
             <view class='progress'>
-              <progress percent="{{item.title.total}}" stroke-width="5" activeColor="skyblue" backgroundColor="block" active />
+              <progress percent="{{item.title.percent}}" stroke-width="5" activeColor="skyblue" backgroundColor="block" active />
             </view>
-            <text>已看{{item.title.total}}%</text>
+            <text>已看{{item.title.percent}}%</text>
           </view>
           <view class='lastLook'>
             <text>上次看到：{{item.title.title}}</text>
-            <text class='time'>2分前</text>
+            <text class='time'>{{item.createdTime}}</text>
           </view>
           <view class='book-btns'>
             <button class='book-btn' bindtap='readMore' data-id='{{item.title._id}}' data-bookId='{{item.title.bookId}}'>继续阅读</button>

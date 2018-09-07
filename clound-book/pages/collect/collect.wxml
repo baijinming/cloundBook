@@ -4,10 +4,10 @@
     <image src='/static/imgs/loading.svg'></image>
   </view>
   <view wx:else>
-    <view class='books' wx:for="{{books}}" wx:key="{{index}}">
-      <view class='book'>
+    <view class='books'>
+      <view class='book' wx:for="{{books}}" wx:key="{{index}}">
         <image src="{{item.book.img}}" class='img' bindtap='jumpbook' data-id='{{item.book._id}}'></image>
-        <text class='author'>作者：{{item.book.author}}</text>
+        <view class='author'>作者：{{item.book.author}}</view>
       </view>
     </view>
     <view class='load' wx:if="{{!hasMore}}">

@@ -42,7 +42,7 @@
   top: 0;
   left: 0;
   bottom: 100rpx;
-  width: 500rpx;
+  width: 600rpx;
   background-color: #fff;
   transform: translate3d(-100%,0,0);
   transition: transform 0.3s ease;

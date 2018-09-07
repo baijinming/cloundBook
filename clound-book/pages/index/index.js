@@ -1,7 +1,7 @@
 //index.js
 //获取应用实例
 const app = getApp()
-import {fetch} from "../../utils/util.js"
+import {fetch,login} from "../../utils/util.js"
 
 Page({
   data: {
@@ -16,6 +16,7 @@ Page({
     hasMore:true
   },
   onLoad: function () {
+    login()
     this.getData()
   },
   getData(){
@@ -30,9 +31,14 @@ Page({
       }),
         fetch.get("/category/books").then(res => {
           reslove()
-          console.log(res.data)
+          let content = [...res.data];
+          content.forEach(item=>{
+            item.books.forEach(item=>{
+              item.createTime = item.createTime.slice(0,10)
+            })
+          })
           this.setData({
-            content: res.data,
+            content: content,
             isLoading: false
           })
         }).catch(err => {
@@ -74,7 +80,13 @@ Page({
       })
       fetch.get("/category/books",{pn:this.data.pn}).then(res => {
         resolve(res);
-        let newArr=[...this.data.content,...res.data]
+        let content = res.data;
+        content.forEach(item => {
+          item.books.forEach(item => {
+            item.createTime = item.createTime.slice(0, 10)
+          })
+        })
+        let newArr=[...this.data.content,...content]
         this.setData({
           content: newArr,
         })

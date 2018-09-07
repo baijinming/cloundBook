@@ -14,7 +14,7 @@ Page({
     bookId: "",
     catalog:[],
     isShow:false,
-    fontSize:32,
+    fontSize:32
   },
 
   /**
@@ -38,6 +38,7 @@ Page({
         article:data,
         isLoading:false
       })
+      wx.setNavigationBarTitle({ title: `${res.data.title}` })
     }).catch(err=>{
       this.setData({
         isLoading: false

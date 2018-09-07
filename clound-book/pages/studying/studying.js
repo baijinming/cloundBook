@@ -24,9 +24,14 @@ Page({
       });
       fetch.get("/readList").then(res => {
         resolve(res)
+        let books = [...res.data];
+        books.forEach(item=>{
+          item.title.percent = parseInt((item.title.index / item.title.total)*100);
+          item.createdTime = item.createdTime.slice(0, 10)
+        })
         this.setData({
-          books: res.data,
-          isLoading: false
+          books: books,
+          isLoading: false,
         })
       })
     })

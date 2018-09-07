@@ -27,7 +27,7 @@
             <view class='book-anthor'>
               <text class='book-l'>{{book.author}}</text>
               <view class='book-r'>
-                <text>两天前</text>
+                <text class='createTime'>{{book.createTime}}</text>
                 <text>{{item.title}}</text>
                 <text>{{book.looknums}}人在看</text></view>
               </view>

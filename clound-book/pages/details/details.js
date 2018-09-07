@@ -27,8 +27,10 @@ Page({
       isLoading: true
     })
     fetch.get(`/book/${this.data.bookId}`).then(res=>{
+      let book = { ...res};
+      book.data.updateTime = book.data.updateTime.slice(0,10)
       this.setData({
-        book:res,
+        book:book,
         isLoading: false
       })
     }).catch(err => {

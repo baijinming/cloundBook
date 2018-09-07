@@ -24,6 +24,7 @@ Page({
   },
   getData(){
     fetch.get(`/category/${this.data.typeId}/books`, { pn: this.data.pn, size: 6 }).then(res=>{
+      wx.setNavigationBarTitle({ title: `${res.data.title}` })
       this.setData({
         content:res
       })

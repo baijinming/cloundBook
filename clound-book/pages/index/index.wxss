@@ -49,9 +49,10 @@
 }
 
 .content .book{
-  margin-top: 30rpx;
+  padding: 30rpx 0;
   display: flex;
   justify-content: space-between;
+  border-bottom: 1px solid #e9e9e9
 }
 
 .book .img{
@@ -87,11 +88,18 @@
 .book .book-anthor{
   display: flex;
   justify-content: space-between;
-
+  height: 28rpx;
+  line-height: 28rpx;
 }
 
 .book .book-anthor .book-r text{
   margin-left: 10rpx;
+}
+
+.book .book-anthor .book-r .createTime{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
 }
 
 .container .load{

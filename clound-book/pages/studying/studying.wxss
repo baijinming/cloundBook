@@ -42,16 +42,25 @@
   justify-content: space-between;
   font-size: 10px;
   color: #999;
+  height: 20rpx;
 }
 
 .book .correlation .book-progress progress{
   height: 10rpx;
-  width: 300rpx;
+  width: 350rpx;
+  margin-top: 8rpx
+}
+
+.book .correlation .book-progress text{
+  height: 20rpx;
+  line-height: 20rpx
 }
 
 .book .correlation .book-author{
   font-size: 12px;
   color: #999;
+  height: 20rpx;
+  line-height: 20rpx
 }
 
 .book .correlation .lastLook{
@@ -59,9 +68,12 @@
   justify-content: space-between;
   font-size: 10px;
   color: #999;
+  height: 20rpx
 }
 
 .book .correlation .lastLook text{
+  height: 20rpx;
+  line-height: 20rpx;
   text-overflow: -o-ellipsis-lastline;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -72,8 +84,7 @@
 }
 
 .book .correlation .lastLook .time{
-  margin-left: 20rpx;
-  width: 60rpx;
+  margin-left: 10rpx;
 }
 
 .book .correlation .book-btns{

@@ -43,10 +43,12 @@ Page({
   },
   //下拉刷新
   onPullDownRefresh() {
+    this.setData({
+      pn:1
+    })
     this.getData().then(res => {
       this.setData({
-        hasMore: true,
-        pn: 1
+        hasMore: true
       })
       wx: wx.stopPullDownRefresh()
     })

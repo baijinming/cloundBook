@@ -1,1 +1,73 @@
-/* pages/user/user.wxss */
+.loading image{
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-top: -150rpx;
+  margin-left: -150rpx;
+  width: 300rpx;
+  height: 300rpx;
+}
+
+.user{
+  background-color: skyblue;
+  color: #fff;
+}
+
+.userinfo{
+  padding: 40rpx;
+  display: flex;
+}
+
+.user .user-icon{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.user .user-title{
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between
+}
+
+.user .user-title .username{
+  font-size: 16px;
+  font-weight: 700
+}
+
+.user .user-title .leave-word{
+  font-size: 10px;
+}
+
+.nav{
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 40rpx;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center
+}
+
+.nav .collect{
+  display: flex;
+  flex-direction: column;
+}
+
+.nav .attention{
+  display: flex;
+  flex-direction: column;
+}
+
+.logo{
+  margin-top: 30rpx;
+  width: 750rpx;
+}
+
+.logo image{
+  width: 750rpx;
+  margin-bottom: -20rpx
+}

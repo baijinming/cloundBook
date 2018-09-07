@@ -10,23 +10,28 @@
 
 .books{
   display: flex;
-  justify-content: space-around
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20rpx;
 }
 
 .books .book{
-  width: 250rpx;
+  width: 350rpx;
   height: 400rpx;
-  text-align: center
+  text-align: center;
+  display: flex;
+  flex-direction: column
 }
 
 .book .img{
   width: 250rpx;
   height: 300rpx;
+  margin-left: 50rpx
 }
 
 .book .author{
   font-size: 14px;
-  font-weight: 700;
+  color: #333;
   margin-top: 30rpx
 }
 

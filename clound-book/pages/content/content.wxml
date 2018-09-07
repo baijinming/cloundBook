@@ -10,17 +10,17 @@
       <template is="entry" data="{{...article}}"/>
     </view>
   </view>
-    <view class='menu'>
-      <image class='icon' src='/static/imgs/left.png' bindtap='toggleChaptor' data-num='-1'></image>
-      <image class='icon' src='/static/imgs/menu.png' bindtap='showCatalog'></image>
-      <image class='icon' src='/static/imgs/add.png' bindtap='addSize'></image>
-      <image class='icon' src='/static/imgs/reduce.png' bindtap='reduceSize'></image>
-      <image class='icon' src='/static/imgs/right.png' bindtap='toggleChaptor' data-num='1'></image>
-    </view>
-    <scroll-view scroll-y class='catalog {{isShow ? "showMenu":""}}'>
-      <view class='catalog-list' wx:for="{{catalog}}" wx:key="{{index}}">
-        <view class='catalog-item' bindtap='cutChapter' data-id='{{item._id}}'>{{item.title}}</view>
-      </view> 
-    </scroll-view>
-    <view class='masklayer' wx:if="{{isShow}}" bindtap='hideCatalog'></view>
+  <view class='menu'>
+    <image class='icon' src='/static/imgs/left.png' bindtap='toggleChaptor' data-num='-1'></image>
+    <image class='icon' src='/static/imgs/menu.png' bindtap='showCatalog'></image>
+    <image class='icon' src='/static/imgs/add.png' bindtap='addSize'></image>
+    <image class='icon' src='/static/imgs/reduce.png' bindtap='reduceSize'></image>
+    <image class='icon' src='/static/imgs/right.png' bindtap='toggleChaptor' data-num='1'></image>
+  </view>
+  <scroll-view scroll-y class='catalog {{isShow ? "showMenu":""}}'>
+    <view class='catalog-list' wx:for="{{catalog}}" wx:key="{{index}}">
+      <view class='catalog-item' bindtap='cutChapter' data-id='{{item._id}}'>{{item.title}}</view>
+    </view> 
+  </scroll-view>
+  <view class='masklayer' wx:if="{{isShow}}" bindtap='hideCatalog'></view>
 </view>

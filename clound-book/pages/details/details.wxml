@@ -27,7 +27,7 @@
         <text class='look-catalog'>查看目录</text>
         <text>共{{book.length}}章</text>
       </view>
-      <text>更新于2天前></text>
+      <text>更新于{{book.data.updateTime}}></text>
     </view>
     <view class='bottom-btn'>
       <button class='read-book' bindtap='lookCatalog' data-id='{{book.data._id}}'>阅读该书籍</button>
